@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Post Card Responsive</title> 
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Signika:300,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+            *,
+            ::before, 
+            ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            html{
+            font-size: 10px;
+            font-family: 'Signika', sans-serif;
+            }
+
+            img {
+            width: 100%;
+            }
+
+            body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1.5em;
+            }
+
+            .blog-post {
+            width: 100%;
+            max-width: 98rem;
+            padding: 5rem;
+            background-color: #ffffff;
+            box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
+            display: flex;
+            align-items: center;
+            border-radius: .8rem;
+            }
+
+            .blog-post__img {
+            min-width: 25rem;
+            max-width: 25rem;
+            transform: translateX(-8rem);
+            position: relative;
+            }
+
+            .blog-post__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: .8rem;
+            }
+
+            .blog-post__img::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            /* background: linear-gradient(to right, rgba(79, 172, 254, .8),
+                                                    rgba(0, 242, 254, .8)); */
+            box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, .05);
+            border-radius: .8rem;
+            }
+
+            .blog-post__date span {
+            display: block;
+            color: rgba(0, 0, 0, .5);
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: .5rem 0;
+            }
+
+            .blog-post__title {
+            font-size: 2.5rem;
+            margin: -7rem 0 1rem;
+            text-transform: uppercase;
+            color: #4facfe;
+            text-align: center;
+            }
+
+            .blog-post__text {
+            margin-bottom: 3rem;
+            font-size: 1.4rem;
+            text-align: justify;
+            color: rgba(0, 0, 0, .7);
+            }
+
+            .blog-post__cta {
+            padding: 1.5rem 3rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            color: #fff;
+            background-image: linear-gradient(to left, #4facfe 0%, #00f2fe 100%);
+            border-radius: .8rem;
+            text-decoration: none;
+            transition: all 1s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .blog-post__cta:hover {
+            background-image: linear-gradient(to left, #00f2fe 0%, #4facfe 100%);
+            }
+
+            @media screen and (max-width: 1068px) {
+            .blog-post {
+                max-width: 80rem;
+            }
+            .blog-post__img {
+                min-width: 25rem;
+                max-width: 25rem;
+            }
+            }
+
+            @media screen and (max-width: 868px) {
+            .blog-post {
+                max-width:             }
+            }
+
+            @media screen and (max-width: 768px) {
+            .blog-post {
+                padding: 2.5rem;
+                flex-direction: column;
+            }
+            .blog-post__img {
+                transform: translate(0, -8rem);
+            }
+            }
+        </style>
+        <div class="blog-post">
+        <div class="blog-post__img">
+            <img src="https://cdn-icons-png.flaticon.com/128/2323/2323516.png" alt="" />
+        </div>
+            <div class="blog-post__info">
+                <h1 class="blog-post__title">Lorem, ipsum</h1>
+                <p class="blog-post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum magni quae minima quo asperiores eum sit illum cumque expedita eos neque quia, necessitatibus sint sunt doloremque ut quaerat eius corporis ea. Numquam libero aliquid, rerum animi blanditiis nemo tempore?</p>
+                <a class="blog-post__cta" href="#">Lire plus</a>
+            </div>
+        </div>
+    </body>
+</html>

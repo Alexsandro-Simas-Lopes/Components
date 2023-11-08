@@ -1,0 +1,31 @@
+/* AJUSTE DE FORMATAÇÃO */
+.container {
+	max-width: 720px;
+	margin: 24px auto 48px auto;
+}
+
+.column {
+	display: inline-block;
+	text-align: center;
+}
+a:hover {
+	text-decoration: none;
+}
+/* TAMANHO DA IMAGEM */
+.column img {
+	display: block;
+	width: 100%;
+	height: 200px;
+}
+
+/*Zoom In*/
+.column#zoomIn img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.column#zoomIn:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
