@@ -34,14 +34,14 @@
             align-items: center;
             justify-content: center;
             padding: 0 1.5em;
-            background-color: #f24e1e;
+            background-color:#012742;
             }
 
             .blog-post {
             width: 100%;
             max-width: 98rem;
             padding: 5rem;
-            background-color: burlywood;
+            background-color: #001524;
             box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
             display: flex;
             align-items: center;
@@ -80,11 +80,12 @@
             font-weight: 600;
             margin: .5rem 0;
             }
+
             .blog-post__title {
             font-size: 2.5rem;
-            margin: -7rem 0 1rem;
+            margin: -7rem 0 1rem;   
             text-transform: uppercase;
-            color: #232939;
+            color: #fff;
             text-align: center;
             }
 
@@ -92,7 +93,7 @@
             margin-bottom: 3rem;
             font-size: 1.4rem;
             text-align: justify;
-            color: rgba(0, 0, 0, .7);
+            color: rgba(255, 255, 255, 0.7);
             }
 
             .blog-post__cta {
@@ -101,7 +102,7 @@
             text-transform: uppercase;
             font-size: 1.2rem;
             color: #fff;
-            background-image: linear-gradient(to left, #232939 0%, #00f1fe63 100%);
+            background-image: linear-gradient(to left, #232939 0%, #00f2fe 100%);
             border-radius: .8rem;
             text-decoration: none;
             transition: all 1s ease-in-out;
@@ -111,24 +112,18 @@
             }
 
             .blog-post__cta:hover {
-            background-image: linear-gradient(to left, #00f1fe63 0%, #232939 100%);
+            background-image: linear-gradient(to left, #00f2fe 0%, #4facfe 100%);
             }
 
             @media screen and (max-width: 1068px) {
-            .blog-post {
-                max-width: 80rem;
+                .blog-post {
+                    max-width: 80rem;
+                }
+                .blog-post__img {
+                    min-width: 25rem;
+                    max-width: 25rem;
+                }
             }
-            .blog-post__img {
-                min-width: 25rem;
-                max-width: 25rem;
-            }
-            }
-
-            @media screen and (max-width: 868px) {
-            .blog-post {
-                max-width:             }
-            }
-
             @media screen and (max-width: 768px) {
             .blog-post {
                 padding: 2.5rem;
@@ -146,7 +141,7 @@
             <div class="blog-post__info">
                 <h1 class="blog-post__title">Lorem, ipsum</h1>
                 <p class="blog-post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum magni quae minima quo asperiores eum sit illum cumque expedita eos neque quia, necessitatibus sint sunt doloremque ut quaerat eius corporis ea. Numquam libero aliquid, rerum animi blanditiis nemo tempore?</p>
-                <a class="blog-post__cta" href="#">Lire plus</a>
+                <a class="blog-post__cta" href="#">Button</a>
             </div>
         </div>
     </body>
