@@ -1,0 +1,20 @@
+.modal_color {
+    position: relative;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.clouds {
+    position: absolute;
+    width: 500px;
+    animation: clouds-animation 20s infinite linear;
+    top: 40px;
+}   
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
