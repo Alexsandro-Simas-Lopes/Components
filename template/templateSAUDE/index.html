@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>S.A.U.D.E.</title>
+
+        <!-- CODEPEN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+        <!-- BOOTSTRAP 5.3v -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <style>
+            section .projects{font-size:3.75vw;background-image:url(/img/1.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;z-index:-1}
+            section .carousel-caption{bottom:25%;right:15%;left:60%;background:rgba(255,68,0,0.29);border:2px solid #ff4500}
+            section .carousel-text{background:#000;color:#fff;padding:30px 40px}
+            .bottone .exceed::after{content:"";position:absolute;bottom:0;left:0;border:0;width:0;height:100%;background-color:#ff4500;transition:all .8s cubic-bezier(0.7,-0.5,0.2,2);z-index:-1}
+            .bottone .exceed:hover{color:#fff;border:2px solid #0050}
+            .bottone .exceed:hover::after{background-color:#ff4500;width:100%;border:0;mix-blend-mode:multiply}
+        </style>
+        <header>
+            <div class="navbar navbar-dark bg-dark box-shadow">
+                <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <i class="bi bi-heart-pulse-fill text-danger"></i>
+                        <strong>S.A.U.D.E.</strong>
+                    </a>
+                </div>
+            </div>
+        </header><!-- ========== PROJETOS ========= -->
+        <section class="projects" id="projects">
+            <div style="width: 100%; height: 100%">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/template/templateSAUDE/img/1.png" class="ImgProject d-block w-100">
+                            <div class="bottone">
+                                <a href="/template/templateSAUDE/exercicios.html" class="exceed carousel-caption d-none d-md-block">
+                                    Exercícios
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/template/templateSAUDE/img/2.png" class="ImgProject d-block w-100">
+                            <div class="bottone">
+                                <a href="/template/templateSAUDE/benefic.html" class="exceed carousel-caption d-none d-md-block">
+                                    Benefícios
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>   
+        </section>
+    </body>
+</html>
+</body>
+</html>

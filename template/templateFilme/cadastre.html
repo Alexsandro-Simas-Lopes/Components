@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CinePower</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <style>
+            @media (min-width: 768px) {
+                #homepage-box {
+                text-align: left !important;
+                }
+            }
+
+            form {
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="date"],
+            input[type="datetime"],
+            input[type="email"],
+            input[type="number"],
+            input[type="search"],
+            input[type="tel"],
+            input[type="time"],
+            input[type="url"],
+            textarea,
+            select {
+                background: rgba(255,255,255,0.1);
+                border: none;
+                font-size: 16px;
+                height: auto;
+                margin: 0;
+                outline: 0;
+                padding: 15px;
+                width: 100%;
+                background-color: #e8eeef;
+                color: #8a97a0;
+                box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+            margin: 0 4px 8px 0;
+            }
+
+            @media screen and (min-width: 480px) {
+                form {
+                    max-width: 480px;
+                }
+            }
+        </style>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav mr-auto">
+                <h1 class="nav-item active"><a class="nav-link" href="/template/index.html">Cine<span class="text-danger">Power</span></a></h1>
+            </ul>
+        </nav>
+        <div class="container text-center p-3 p-md-5">
+            <p class="h2">Cadastro de Filmes</p>
+        </div>
+        <main class="container border-bottom pb-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="index.html" method="post">
+                        <h1> Cadastro de filmes </h1>
+                        <fieldset>
+                            <label for="name">Titulo:</label>
+                            <input type="text" id="name" name="user_name">
+                            
+                            <label for="email">Genero:</label>
+                            <input type="email" id="mail" name="user_email">
+                        
+                            <label for="password">Ano de Lançamento:</label>
+                            <input type="password" id="password" name="user_password">
+                            
+                            <label for="bio">Snopse:</label>
+                            <textarea id="bio" name="user_bio"></textarea>
+                        </fieldset>
+                        <a class="btn btn-success btn-lg" href="/template/index.html">CADASTRAR</a>
+                        <a class="btn btn-danger btn-lg" href="/template/index.html">VOLTAR</a>
+                        
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

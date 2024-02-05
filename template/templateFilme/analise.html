@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePower</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <style>
+        @media (min-width: 768px) {
+            #homepage-box {
+            text-align: left !important;
+            }
+        }
+        form {
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background: #f4f7f8;
+        border-radius: 8px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        textarea,
+        select {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            font-size: 16px;
+            height: auto;
+            margin: 0;
+            outline: 0;
+            padding: 15px;
+            padding-bottom: 30px;
+            width: 100%;
+            background-color: #e8eeef;
+            color: #8a97a0;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+        margin: 0 4px 8px 0;
+        }
+
+        @media screen and (min-width: 480px) {
+            form {
+                max-width: 480px;
+            }
+        }
+
+        .faq-section {
+            background: #fdfdfd;
+            min-height: 100vh;
+            padding: 10vh 0 0;
+        }
+        .faq-title h2 {
+        position: relative;
+        margin-bottom: 45px;
+        display: inline-block;
+        font-weight: 600;
+        line-height: 1;
+        }
+        .faq-title h2::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            width: 60px;
+            height: 2px;
+            background: #E91E63;
+            bottom: -25px;
+            margin-left: -30px;
+        }
+        .faq-title p {
+        padding: 0 190px;
+        margin-bottom: 10px;
+        }
+
+        .faq {
+        background: #FFFFFF;
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+        }
+
+        .faq .card {
+        border: none;
+        background: none;
+        border-bottom: 1px dashed #CEE1F8;
+        }
+
+        .faq .card .card-header {
+        padding: 0px;
+        border: none;
+        background: none;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        }
+
+        .faq .card .card-header:hover {
+            background: rgba(233, 30, 99, 0.1);
+            padding-left: 10px;
+        }
+        .faq .card .card-header .faq-title {
+        width: 100%;
+        text-align: left;
+        padding: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: #3B566E;
+        text-decoration: none !important;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
+        .faq .card .card-body p {
+        margin-bottom: 14px;
+        }
+
+        @media (max-width: 991px) {
+            .faq {
+                margin-bottom: 30px;
+            }
+            .faq .card .card-header .faq-title {
+                line-height: 26px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <div id="page"></div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav mr-auto">
+                <h1 class="nav-item active"><a class="nav-link" href="/template/index.html">Cine<span class="text-danger">Power</span></a></h1>
+            </ul>
+        </nav>
+        <main class="container pb-3">
+            <div class="container text-center p-3 p-md-5">
+                <form action="index.html" method="post">
+                    <h3> Exibindo Dados do Filme </h3>
+                    <fieldset>
+                        <label for="bio">Qual a sua análise sobre o filme:</label>
+                        <textarea id="bio" name="user_bio"></textarea>
+                        <label for="email">Qual nota você da a esse filme:</label>
+                        <input type="email" id="mail" name="user_email">
+                    </fieldset>
+                    <a class="btn btn-success btn-lg" href="/template/index.html">CADASTRAR</a>
+                    <a class="btn btn-danger btn-lg" href="/template/index.html">VOLTAR</a>
+                </form>
+            </div>
+            <h3>Comentários...</h3><!-- Trocar pelo nome do filme -->
+            <div class="container">
+                <div class="faq overflow-auto" id="accordion" style="height: 100%; width: 100%;">
+                    <div class="card scrollspy-example-2">
+                        <div class="card-header" id="faqHeading-1">
+                            <h5 class="faq-title">
+                                <b><i class="bi bi-star-fill text-warning"></i>1.2</b><div> What is Lorem Ipsum?</div> 
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+<!-- 
+    <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>CinePower</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.11/skrollr.min.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <style>
+            @media (min-width: 768px) {
+                #homepage-box {
+                text-align: left !important;
+                }
+            }
+            form {
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="date"],
+            input[type="datetime"],
+            input[type="email"],
+            input[type="number"],
+            input[type="search"],
+            input[type="tel"],
+            input[type="time"],
+            input[type="url"],
+            textarea,
+            select {
+                background: rgba(255,255,255,0.1);
+                border: none;
+                font-size: 16px;
+                height: auto;
+                margin: 0;
+                outline: 0;
+                padding: 15px;
+                padding-bottom: 30px;
+                width: 100%;
+                background-color: #e8eeef;
+                color: #8a97a0;
+                box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+            margin: 0 4px 8px 0;
+            }
+
+            @media screen and (min-width: 480px) {
+                form {
+                    max-width: 480px;
+                }
+            }
+
+            .faq-section {
+                background: #fdfdfd;
+                min-height: 100vh;
+                padding: 10vh 0 0;
+            }
+            .faq-title h2 {
+            position: relative;
+            margin-bottom: 45px;
+            display: inline-block;
+            font-weight: 600;
+            line-height: 1;
+            }
+            .faq-title h2::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                width: 60px;
+                height: 2px;
+                background: #E91E63;
+                bottom: -25px;
+                margin-left: -30px;
+            }
+            .faq-title p {
+            padding: 0 190px;
+            margin-bottom: 10px;
+            }
+
+            .faq {
+            background: #FFFFFF;
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+            border-radius: 4px;
+            }
+
+            .faq .card {
+            border: none;
+            background: none;
+            border-bottom: 1px dashed #CEE1F8;
+            }
+
+            .faq .card .card-header {
+            padding: 0px;
+            border: none;
+            background: none;
+            -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            }
+
+            .faq .card .card-header:hover {
+                background: rgba(233, 30, 99, 0.1);
+                padding-left: 10px;
+            }
+            .faq .card .card-header .faq-title {
+            width: 100%;
+            text-align: left;
+            padding: 0px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-weight: 400;
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #3B566E;
+            text-decoration: none !important;
+            -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            }
+            .faq .card .card-body p {
+            margin-bottom: 14px;
+            }
+
+            @media (max-width: 991px) {
+                .faq {
+                    margin-bottom: 30px;
+                }
+                .faq .card .card-header .faq-title {
+                    line-height: 26px;
+                    margin-top: 10px;
+                }
+            }
+        </style>
+        <div id="page">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="navbar-nav mr-auto">
+                    <h1 class="nav-item active"><a class="nav-link" th:href="@{/home}">Cine<span class="text-danger">Power</span></a></h1>
+                </ul>
+            </nav>
+            <main class="container pb-3">
+                <div class="container text-center p-3 p-md-5">
+                    <form th:action="@{gravar-analise}" th:object="${analise}" method="post">
+                        <h3>Dados do Filme </h3>
+                        <fieldset>
+                            <p>Qual a sua análise sobre o filme: <input type="text" th:field="${analise.analise}"></p>
+                            <p>Qual nota você da a esse filme: <input type="text" th:field="${analise.nota}"></p>
+                            <input type="hidden" th:field="${filme.id}"></p>
+                        </fieldset>
+                        
+                        <a><input class="btn btn-success btn-lg" type="submit" value="ENVIAR"></a>
+                        <a class="btn btn-danger btn-lg" th:href="@{/home}">VOLTAR</a>
+                    </form>
+                </div>
+                <h3><span style="text-transform:uppercase;" th:text="${filme.titulo}"/></h3>
+                <div class="container">
+                    <div class="faq overflow-auto" id="accordion">
+                        <div class="card scrollspy-example-2">
+                            <div class="card-header" id="faqHeading-1" th:each="reg : ${analises}">
+                                <h5 class="faq-title">
+                                    <b><i class="bi bi-star-fill text-warning"></i><span th:text="${reg.nota}"></b><span th:text="${reg.analise}"> 
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
+ -->

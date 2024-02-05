@@ -1,0 +1,28 @@
+{
+    "movies": [
+        {
+            "titulo": "Archive",
+            "snopse": "Lorem, ipsum dolor sit amet consectetur neque eligendi",
+            "genero": "Ação/Drama",
+            "lancamento": "2021"
+        },
+        {
+            "titulo": "Toy Store",
+            "snopse": "Lorem, ipsum dolor sit amet",
+            "genero": "Aventura",
+            "lancamento": "2014"
+        },
+        {
+            "titulo": "O Senhor do Aneis",
+            "snopse": "Lorem, ipsum dolor sit amet consectetur neque eligendi",
+            "genero": "Ação/Aventura",
+            "lancamento": "2008"
+        },
+        {
+            "titulo": "Ta dando Onda",
+            "snopse": "Lorem, ipsum dolor sit amet consectetur neque eligendi.Lorem, ipsum dolor sit amet consectetur neque eligendi",
+            "genero": "Ação/Drama/Aventura",
+            "lancamento": "2012"
+        }
+    ]
+}
